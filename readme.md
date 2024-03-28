@@ -7,7 +7,7 @@ This guide assumes you are comfortable with the command line, or terminal. If no
 Databases are applications that store and retrieve data efficiently.
 
 
-| **Persistence**  -	Survive power-off<br> **Security**  -	Control who sees data<br> **Queries**  -	Find data quickly<br> **Backups** - 	Recover from disaster<br> **Integrity**  -	Prevent data corruption<br> **ACID** 	-	Guarantees on data integrity | ![](img%5Csql0.png) | 
+| **Persistence**  -	Survive power-off<br> **Security**  -	Control who sees data<br> **Queries**  -	Find data quickly<br> **Backups** - 	Recover from disaster<br> **Integrity**  -	Prevent data corruption<br> **ACID** 	-	Guarantees on data integrity | ![](img/sql0.png) | 
 | :-: | :-: | 
 
 
@@ -70,7 +70,7 @@ There are many kinds of Database systems we can use.
 
 They split up into groups depending how they work with data:
 
-![](img%5Csql2.png)
+![](img/sql2.png)
 
 
 > BJSS clients often use Microsoft, Postgres, Oracle
@@ -89,7 +89,7 @@ THINK: session data for a website – just throw whatever user data we need as a
 
 You take your data - like your records of a Customer and their orders - and store that whole lot against a key. The key will be the Customer ID you've given that customer.
 
-![](img%5Csql5.png)
+![](img/sql5.png)
 
 You can store data and look it up. 
 
@@ -106,7 +106,7 @@ You still store 'a lump' of data. But you don't use a key. Instead, you can quer
 Store ‘whole documents’ as JSON, XML, BSON, RDF etc
   * Documents are mainly hierarchical tree data structures consisting of maps, collections, arrays, scalar values.
 
-![](img%5Csql8.png)
+![](img/sql8.png)
 
 In the example above, we could return all documents where "city equals Bristol" - and we would get our document back. 
 
@@ -115,7 +115,7 @@ Example:  **MongoDB**
 
 ### Database models: GRaph
 
-![](img%5Csql11.png)
+![](img/sql11.png)
 
 A Graph database is a different kind entirely.
 
@@ -150,7 +150,7 @@ Example:  **Graphite**
 
 ### STILL RELEVANT: Relational Databases (2022)
 
-![](img%5Csql14.jpg)
+![](img/sql14.jpg)
 
 The most widely used kind of database is the relational database, and the graph hasn't changed much over the years, the big guns are still Oracle, MySQL, Microsoft and Postgres.
 
@@ -171,7 +171,7 @@ Data is organized in Tables in a relational database.
 This is an example of a database table storing student data.
 The table stores data about all students.
 
-![](img%5Csql16.png)
+![](img/sql16.png)
 
 You can see the table is divided up into three rows – one row per student
 
@@ -183,7 +183,7 @@ Each row has an identical structure – it contains the same pieces of data abou
 
 The second row resembles the first, but holds data about `Mary Johnson` instead of `John McGill`
 
-![](img%5Csql17.png)
+![](img/sql17.png)
 
 It is this regular nature that helps us fetch and process data using code.
 
@@ -196,7 +196,7 @@ Columns are used to add meaning to each piece of data in a row.
 It has a name that explains what the data means, and a data type.
 This data type lets our database store and search for data efficiently.
 
-![](img%5Csql18.png)
+![](img/sql18.png)
 
 Columns can be given other attributes as well:
 NOT NULL means we must supply a value
@@ -520,7 +520,7 @@ To do that we need two new things:
 1. An *id* column in the address table which uniquely identifies an address
 2. A new column in the Students table which holds the *address_id* of the address they live at
 
-![](img%5Csql19.png)
+![](img/sql19.png)
 
 Can you see how that works?
 `John McGill` lives at *address_id* `1`. We can look that up in the Address table and find the details of `Elm Street, SP1 1AB`
@@ -555,13 +555,13 @@ A `LEFT JOIN` returns all rows from the left table (the table specified before t
 
 ## QUIZ : One-to-one
 
-![](img%5Csql20.png)
+![](img/sql20.png)
 
 If things go well and Mary Johnson moves in to live with John McGill, what change would we need to make to the Student table?
 
 ## Answer
 
-![](img%5Csql21.png)
+![](img/sql21.png)
 
 [A: student_number 105 address_id changes to 2 from 1]
 
@@ -590,7 +590,7 @@ More complex data needs more complex relationships.
 This is how we can model Students that enrol on Seminars.
 One student can attend many seminars – and each seminar will have many students.
 
-![](img%5Csql22.png)
+![](img/sql22.png)
 
 This is a classis MANY-TO-MANY relationship.
 We do it by breaking it down into a ONE-TO-MANY and a MANY-TO-ONE relationship.
@@ -601,7 +601,7 @@ Look at Student-Enrolment. That’s a ONE-TO-MANY. It needs:
 
 This is different to one-to-one; it is “backwards”. We can have many rows in the Enrolment table all linking back to the same student:
 
-![](img%5Csql23.png)
+![](img/sql23.png)
 
 The Enrolment table is called a LINK TABLE as it links together the Student and Seminar tables.
 Have a look at the bottom half of this diagram. It shows actual rows.
@@ -624,7 +624,7 @@ Relationships allow us to run QUERIES on our data like this. That’s powerful.
 
 A little more on keys. Every relationship is simply a reference to a PRIMARY KEY in some table. It’s that simple.
 
-![](img%5Csql24.png)
+![](img/sql24.png)
 
 PRIMARY KEYS uniquely identify a row in a table, which means they uniquely identify some “thing” in the real world.
 
@@ -652,7 +652,7 @@ There are 5 main ways to deal with that:
 4. SET NULL – set the foreign key to NULL to indicate we don’t have anything to link to
 5. SET DEFAULT – use a default value, if that makes sense -  eg a Head Office Telephone number, if we delete a local phone number
 
-![](img%5Csql25.png)
+![](img/sql25.png)
 
 ## Example - Airbnb
 
@@ -660,7 +660,7 @@ Finally for this section, here’s an example of how powerful these techniques c
 
 These are the tables, columns and relationships you would need to build an AirBnB clone.
 
-![](img%5Csql26.tiff)
+![](img/sql26.tiff)
 
 It features around bookings, which are between hosts and users.
 A booking has a Place in some City, in a Country.
@@ -681,7 +681,7 @@ In SQL there are database objects. At the most simple level, you can have a clus
 
 The most common things, and the ones we’ll be working with today are schema and table. The others are important in SQL, but beyond the scope of the objectives for today, but we’d recommend reading further if you are interested.
 
-![](img%5Csql27.png)
+![](img/sql27.png)
 
 * Most commonly used :
   * **SCHEMA**
