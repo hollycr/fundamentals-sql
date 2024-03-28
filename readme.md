@@ -193,16 +193,15 @@ A table can have unlimited rows, limited only by practical matters like speed an
 
 Columns are used to add meaning to each piece of data in a row.
 
-It has a name that explains what the data means, and a data type.
-This data type lets our database store and search for data efficiently.
+It has a name that explains what the data means, and a data type. You can find [more on data types here](https://www.w3schools.com/sql/sql_datatypes.asp), and we'll use some later. This data type lets our database store and search for data efficiently.
 
 ![](img/sql18.png)
 
-Columns can be given other attributes as well:
-NOT NULL means we must supply a value
-DEFAULT is the value we should store in that column if nothing is provided
+Columns can be given other attributes - sometimes known as constraints - as well:
+* NOT NULL means we must supply a value
+* DEFAULT is the value we should store in that column if nothing is provided
 
-Why is everything in UPPER CASE? No reason – it is convention from ancient days. 
+> :thought_balloon: Why is everything in UPPER CASE? No reason – it is convention from ancient days. 
 Any case can be used. 
 
 ---
