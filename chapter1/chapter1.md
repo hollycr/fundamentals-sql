@@ -62,4 +62,4 @@ You will have seen similar things in Excel spreadsheets
 
 So, now we know the very basics of what a database is and what it does, let's look at different types of database available.
 
-[>> Different Types of databases](\chapter2\chapter2.md)
+[>> Different Types of databases](/chapter2/chapter2.md)
