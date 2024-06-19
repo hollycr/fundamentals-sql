@@ -186,7 +186,7 @@ Finally for this section, here’s an example of how powerful these techniques c
 
 These are the tables, columns and relationships you would need to build an AirBnB clone.
 
-![](/img/sql26.png
+![](/img/sql26.png)
 
 It features around bookings, which are between hosts and users.
 A booking has a Place in some City, in a Country.
