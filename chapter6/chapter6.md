@@ -8,7 +8,7 @@ In SQL there are database objects. At the most simple level, you can have a clus
 
 The most common things, and the ones we’ll be working with today are schema and table. The others are important in SQL, but beyond the scope of the objectives for today, but we’d recommend reading further if you are interested.
 
-![](img/sql27.png)
+![](../img/sql27.png)
 
 * Most commonly used :
   * **SCHEMA**
@@ -28,7 +28,7 @@ The most common things, and the ones we’ll be working with today are schema an
 
 In order to create a database, the PostgreSQL server must be up and running.
 
-![Alt text](img/createdb.png)
+![Alt text](../img/createdb.png)
 
 Before you can do anything, you must initialize a database storage area on disk. We call this a database cluster. (The SQL standard uses the term catalog cluster.) 
 
@@ -41,7 +41,7 @@ The database server itself does not require the postgres database to exist, but 
 
 A  **schema**  is essentially a  **namespace** : it contains named objects (tables, data types, functions, and operators) whose names can duplicate those of other objects existing in other schemas. Each object is qualified :  **database.schema.object_name**
 
-![Alt text](img/createschema.png)
+![Alt text](../img/createschema.png)
 
 The first schema in the search path that exists is the default location for creating new objects. That is the reason that by default objects are created in the public schema. When objects are referenced in any other context without schema qualification (table modification, data modification, or query commands) the search path is traversed until a matching object is found. Therefore, in the default configuration, any unqualified access again can only refer to the public schema.
 
@@ -91,7 +91,7 @@ There are many different types, just as many as you would find in a programming 
 
 However, the most common ones you will come across are numeric types – generally integer, but many others exist – and character types – basically “string” but typed in SQL as varchar or char!
 
-![Alt text](img/datatypes.png)
+![Alt text](../img/datatypes.png)
 
 ## Data definition language 
 
@@ -106,7 +106,7 @@ Now when we look at the schema defined for the table, it shows us 5 columnsm wit
 We can then drop the table to delete it.
 
 
-![Alt text](img/ddl.png)
+![Alt text](../img/ddl.png)
 
 ## SQL: Data Manipulation Language - basics 
 
@@ -137,6 +137,6 @@ DELETE FROM table_name WHERE condition;
 
 Now with DML, it’s a bit different from DDL. This is the world you will be more familiar with, as we SELECT from the person table, insert records, and delete records.
 
-![Alt text](img/dml.png)
+![Alt text](../img/dml.png)
 
 So DML is more about the data, whereas DDL is more about the structure.
